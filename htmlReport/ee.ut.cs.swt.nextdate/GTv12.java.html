@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="et"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GTv12.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GTv2 Coverage Results</a> &gt; <a href="index.source.html" class="el_package">ee.ut.cs.swt.nextdate</a> &gt; <span class="el_source">GTv12.java</span></div><h1>GTv12.java</h1><pre class="source lang-java linenums">package ee.ut.cs.swt.nextdate;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+<span class="nc" id="L6">public class GTv12 {</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate1() throws Throwable {
+<span class="nc" id="L10">	    NextDate nextDate0 = new NextDate(10, 10, 1801);</span>
+<span class="nc" id="L11">	    String string0 = nextDate0.run(10, 10, 1801);</span>
+<span class="nc" id="L12">	    assertEquals(&quot;10/11/1801&quot;, string0);</span>
+<span class="nc" id="L13">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate0() throws Throwable {
+<span class="nc" id="L17">	    NextDate nextDate0 = new NextDate(1970, 1970, 1970);</span>
+<span class="nc" id="L18">	    String string0 = nextDate0.run(2, 1970, 1970);</span>
+<span class="nc" id="L19">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L20">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate3() throws Throwable {
+<span class="nc" id="L24">	    NextDate nextDate0 = new NextDate(1959, 1959, 1959);</span>
+<span class="nc" id="L25">	    String string0 = nextDate0.run(11, 31, 1959);</span>
+<span class="nc" id="L26">	    assertEquals(&quot;Invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L27">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate2() throws Throwable {
+<span class="nc" id="L31">	    NextDate nextDate0 = new NextDate(1965, 1965, 1965);</span>
+<span class="nc" id="L32">	    String string0 = nextDate0.run(5, 31, 1965);</span>
+<span class="nc" id="L33">	    assertEquals(&quot;6/1/1965&quot;, string0);</span>
+<span class="nc" id="L34">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate5() throws Throwable {
+<span class="nc" id="L38">	    NextDate nextDate0 = new NextDate(30, 30, 30);</span>
+<span class="nc" id="L39">	    String string0 = nextDate0.run(9, 30, 1991);</span>
+<span class="nc" id="L40">	    assertEquals(&quot;10/1/1991&quot;, string0);</span>
+<span class="nc" id="L41">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate4() throws Throwable {
+<span class="nc" id="L45">	    NextDate nextDate0 = new NextDate(6, 6, 6);</span>
+<span class="nc" id="L46">	    String string0 = nextDate0.run(6, 6, 2019);</span>
+<span class="nc" id="L47">	    assertEquals(&quot;6/7/2019&quot;, string0);</span>
+<span class="nc" id="L48">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunReturningNonEmptyString() throws Throwable {
+<span class="nc" id="L52">	    NextDate nextDate0 = new NextDate(1951, 1951, 1951);</span>
+<span class="nc" id="L53">	    String string0 = nextDate0.run(2, 28, 1951);</span>
+<span class="nc" id="L54">	    assertEquals(&quot;3/1/1951&quot;, string0);</span>
+<span class="nc" id="L55">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunWithZero() throws Throwable {
+<span class="nc" id="L59">	    NextDate nextDate0 = new NextDate(0, 0, 0);</span>
+<span class="nc" id="L60">	    String string0 = nextDate0.run(0, 1089, 1089);</span>
+<span class="nc" id="L61">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L62">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunWithZeroAndZero() throws Throwable {
+<span class="nc" id="L66">	    NextDate nextDate0 = new NextDate(0, 0, 0);</span>
+<span class="nc" id="L67">	    String string0 = nextDate0.run(0, 0, 0);</span>
+<span class="nc" id="L68">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L69">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunWithPositive1() throws Throwable {
+<span class="nc" id="L73">	    NextDate nextDate0 = new NextDate(1, 1, 1);</span>
+<span class="nc" id="L74">	    String string0 = nextDate0.run(1, 1, 1);</span>
+<span class="nc" id="L75">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L76">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate14() throws Throwable {
+<span class="nc" id="L80">	    NextDate nextDate0 = new NextDate(3, 3, 3);</span>
+<span class="nc" id="L81">	    String string0 = nextDate0.run(3, 3, 1801);</span>
+<span class="nc" id="L82">	    assertEquals(&quot;3/4/1801&quot;, string0);</span>
+<span class="nc" id="L83">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunWithPositive0() throws Throwable {
+<span class="nc" id="L87">	    NextDate nextDate0 = new NextDate(21, 21, 21);</span>
+<span class="nc" id="L88">	    String string0 = nextDate0.run(21, 21, 21);</span>
+<span class="nc" id="L89">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L90">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate13() throws Throwable {
+<span class="nc" id="L94">	    NextDate nextDate0 = new NextDate(1970, 1970, 1970);</span>
+<span class="nc" id="L95">	    String string0 = nextDate0.run(1, 1, 1970);</span>
+<span class="nc" id="L96">	    assertEquals(&quot;1/2/1970&quot;, string0);</span>
+<span class="nc" id="L97">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate16() throws Throwable {
+<span class="nc" id="L101">	    NextDate nextDate0 = new NextDate(2004, 2004, 2004);</span>
+<span class="nc" id="L102">	    String string0 = nextDate0.run(4, 4, 2004);</span>
+<span class="nc" id="L103">	    assertEquals(&quot;4/5/2004&quot;, string0);</span>
+<span class="nc" id="L104">	}</span>
+
+	@Test(timeout = 4000)
+	public void testRunWithPositive2() throws Throwable {
+<span class="nc" id="L108">	    NextDate nextDate0 = new NextDate(3718, 3718, 3718);</span>
+<span class="nc" id="L109">	    String string0 = nextDate0.run(12, 3718, 3718);</span>
+<span class="nc" id="L110">	    assertEquals(&quot;invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L111">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate15() throws Throwable {
+<span class="nc" id="L115">	    NextDate nextDate0 = new NextDate(1959, 1959, 1959);</span>
+<span class="nc" id="L116">	    String string0 = nextDate0.run(8, 8, 1959);</span>
+<span class="nc" id="L117">	    assertEquals(&quot;8/9/1959&quot;, string0);</span>
+<span class="nc" id="L118">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate7() throws Throwable {
+<span class="nc" id="L122">	    NextDate nextDate0 = new NextDate(14, 14, 14);</span>
+<span class="nc" id="L123">	    String string0 = nextDate0.run(12, 14, 2019);</span>
+<span class="nc" id="L124">	    assertEquals(&quot;12/15/2019&quot;, string0);</span>
+<span class="nc" id="L125">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate6() throws Throwable {
+<span class="nc" id="L129">	    NextDate nextDate0 = new NextDate(3754, 3754, 3754);</span>
+<span class="nc" id="L130">	    String string0 = nextDate0.run(12, 31, 2021);</span>
+<span class="nc" id="L131">	    assertEquals(&quot;Invalid Next Year&quot;, string0);</span>
+<span class="nc" id="L132">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate9() throws Throwable {
+<span class="nc" id="L136">	    NextDate nextDate0 = new NextDate(1970, 1970, 1970);</span>
+<span class="nc" id="L137">	    String string0 = nextDate0.run(7, 7, 1970);</span>
+<span class="nc" id="L138">	    assertEquals(&quot;7/7/1970&quot;, string0);</span>
+<span class="nc" id="L139">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate8() throws Throwable {
+<span class="nc" id="L143">	    NextDate nextDate0 = new NextDate(3756, 3756, 3756);</span>
+<span class="nc" id="L144">	    String string0 = nextDate0.run(12, 31, 2019);</span>
+<span class="nc" id="L145">	    assertEquals(&quot;1/1/2020&quot;, string0);</span>
+<span class="nc" id="L146">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate10() throws Throwable {
+<span class="nc" id="L150">	    NextDate nextDate0 = new NextDate(1963, 1963, 1963);</span>
+<span class="nc" id="L151">	    String string0 = nextDate0.run(2, 2, 1963);</span>
+<span class="nc" id="L152">	    assertEquals(&quot;2/3/1963&quot;, string0);</span>
+<span class="nc" id="L153">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate12() throws Throwable {
+<span class="nc" id="L157">	    NextDate nextDate0 = new NextDate(1970, 1970, 1970);</span>
+<span class="nc" id="L158">	    String string0 = nextDate0.run(2, 29, 1970);</span>
+<span class="nc" id="L159">	    assertEquals(&quot;Invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L160">	}</span>
+
+	@Test(timeout = 4000)
+	public void testCreatesNextDate11() throws Throwable {
+<span class="nc" id="L164">	    NextDate nextDate0 = new NextDate(1959, 1959, 1959);</span>
+<span class="nc" id="L165">	    String string0 = nextDate0.run(2, 31, 1959);</span>
+<span class="nc" id="L166">	    assertEquals(&quot;Invalid Input Date&quot;, string0);</span>
+<span class="nc" id="L167">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
