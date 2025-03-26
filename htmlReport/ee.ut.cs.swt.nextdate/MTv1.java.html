@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="et"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MTv1.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MTv1 Coverage Results</a> &gt; <a href="index.source.html" class="el_package">ee.ut.cs.swt.nextdate</a> &gt; <span class="el_source">MTv1.java</span></div><h1>MTv1.java</h1><pre class="source lang-java linenums">package ee.ut.cs.swt.nextdate;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="et"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MTv1.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GTv1 Coverage Results</a> &gt; <a href="index.source.html" class="el_package">ee.ut.cs.swt.nextdate</a> &gt; <span class="el_source">MTv1.java</span></div><h1>MTv1.java</h1><pre class="source lang-java linenums">package ee.ut.cs.swt.nextdate;
 
 import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.Test;
 
-<span class="fc" id="L7">public class MTv1 {</span>
+<span class="nc" id="L7">public class MTv1 {</span>
 	
-<span class="fc" id="L9">	private NextDate trialDate = new NextDate(3,4,1976);</span>
+<span class="nc" id="L9">	private NextDate trialDate = new NextDate(3,4,1976);</span>
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-<span class="fc" id="L13">	}</span>
+<span class="nc" id="L13">	}</span>
 
 	//@Test
 	/*
@@ -19,13 +19,13 @@ import org.junit.Test;
 	
 	@Test
 	public final void testJuneToJuly(){
-<span class="fc" id="L22">	assertEquals(&quot;7/1/2001&quot;, trialDate.run(6, 30, 2001));</span>
-<span class="fc" id="L23">	}</span>
+<span class="nc" id="L22">	assertEquals(&quot;7/1/2001&quot;, trialDate.run(6, 30, 2001));</span>
+<span class="nc" id="L23">	}</span>
 	
 	@Test
 	public final void testMarchToApril(){
-<span class="fc" id="L27">	assertEquals(&quot;4/1/2001&quot;, trialDate.run(3, 31, 2001));</span>
-<span class="fc" id="L28">	}</span>
+<span class="nc" id="L27">	assertEquals(&quot;4/1/2001&quot;, trialDate.run(3, 31, 2001));</span>
+<span class="nc" id="L28">	}</span>
 
 	@Test
 <span class="nc" id="L31">	public final void testDecemberToJanuary(){ assertEquals(&quot;Invalid Next Year&quot;, trialDate.run(12, 31, 2021)); }</span>
