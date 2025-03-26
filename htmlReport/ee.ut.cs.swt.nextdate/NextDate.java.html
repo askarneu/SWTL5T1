@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="et"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NextDate.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GTv1 Coverage Results</a> &gt; <a href="index.source.html" class="el_package">ee.ut.cs.swt.nextdate</a> &gt; <span class="el_source">NextDate.java</span></div><h1>NextDate.java</h1><pre class="source lang-java linenums">package ee.ut.cs.swt.nextdate;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="et"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NextDate.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GTv2 Coverage Results</a> &gt; <a href="index.source.html" class="el_package">ee.ut.cs.swt.nextdate</a> &gt; <span class="el_source">NextDate.java</span></div><h1>NextDate.java</h1><pre class="source lang-java linenums">package ee.ut.cs.swt.nextdate;
 
 public class NextDate {
 	
@@ -60,17 +60,17 @@ public class NextDate {
 		{
 			// To fix &quot;Fault 1&quot;, uncomment the correct line 63 and comment out the incorrect line 62.
 //			if(day &lt;= 31) //if the day is not 31, just increment the day
-<span class="pc bpc" id="L63" title="1 of 2 branches missed.">			if (day &lt; 31) //if the day is not 31, just increment the next day</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">			if (day &lt; 31) //if the day is not 31, just increment the next day</span>
 <span class="fc" id="L64">				tomorrowDay = day +1;</span>
 			else { //day is 31, reset the day and month to 1 and increment the year
-<span class="nc" id="L66">				tomorrowDay = 1;</span>
-<span class="nc" id="L67">				tomorrowMonth = 1;</span>
+<span class="fc" id="L66">				tomorrowDay = 1;</span>
+<span class="fc" id="L67">				tomorrowMonth = 1;</span>
 			// To fix &quot;Fault 2&quot;, uncomment the correct line 70 and comment out the incorrect line 69
 //				if(year == 2022) //make sure the next year is within the permissible range
-<span class="nc bnc" id="L70" title="All 2 branches missed.">				if(year == 2021) //make sure the next year is within the permissible range</span>
-<span class="nc" id="L71">					return &quot;Invalid Next Year&quot;;</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">				if(year == 2021) //make sure the next year is within the permissible range</span>
+<span class="fc" id="L71">					return &quot;Invalid Next Year&quot;;</span>
 				else  //it was a permissible year - go ahead and increment the year
-<span class="nc" id="L73">					tomorrowYear = year +1;</span>
+<span class="fc" id="L73">					tomorrowYear = year +1;</span>
 			}
 				
 		}
@@ -82,21 +82,21 @@ public class NextDate {
 			else {
 <span class="fc bfc" id="L83" title="All 2 branches covered.">				if(day == 28) {  //if this is not a leap year, reset day and increment the day</span>
 					// step 1. to enable leap year functionality , uncomment lines 85-87 and 90
-//					if(isLeapYear(year)) //was a leap year
-//						tomorrowDay = 29;
-//					else {  //was not a leap year
+<span class="fc bfc" id="L85" title="All 2 branches covered.">					if(isLeapYear(year)) //was a leap year</span>
+<span class="fc" id="L86">						tomorrowDay = 29;</span>
+					else {  //was not a leap year
 <span class="fc" id="L88">						tomorrowDay = 1;</span>
 <span class="fc" id="L89">						tomorrowMonth = 3;</span>
-//					}
+					}
 				}
 <span class="fc bfc" id="L92" title="All 2 branches covered.">				else if(day == 29){ //29th date of February</span>
 					// step 2. To enable leap year functionality , uncomment lines 94-97 and 99
-//					if(isLeapYear(year)){  //AND a leap year - reset the day to 1, month to 3
-//						tomorrowDay = 1;
-//						tomorrowMonth = 3;
-//					}
+<span class="fc bfc" id="L94" title="All 2 branches covered.">					if(isLeapYear(year)){  //AND a leap year - reset the day to 1, month to 3</span>
+<span class="fc" id="L95">						tomorrowDay = 1;</span>
+<span class="fc" id="L96">						tomorrowMonth = 3;</span>
+					}
 					// To seed &quot;Fault 4&quot;, comment out the lines 99-100
-//					else
+					else
 <span class="fc" id="L100">						return &quot;Invalid Input Date&quot;;</span>
 				}
 				//
@@ -181,13 +181,13 @@ public class NextDate {
 	 */
 
 	// To enable leap year functionality, first uncomment the lines starting from 184-190, and then perform the following two steps step 1: uncomment lines 85-87 and 90, step 2: uncomment lines 94-97 and 99
-//	private static boolean isLeapYear(int year)
-//	{
-//		if((year % 100) == 0)
-//			return (year % 400) == 0;
-//		else
-//			return (year % 4) == 0;
-//	}
+	private static boolean isLeapYear(int year)
+	{
+<span class="pc bpc" id="L186" title="1 of 2 branches missed.">		if((year % 100) == 0)</span>
+<span class="nc bnc" id="L187" title="All 2 branches missed.">			return (year % 400) == 0;</span>
+		else
+<span class="fc bfc" id="L189" title="All 2 branches covered.">			return (year % 4) == 0;</span>
+	}
 
 }
 
